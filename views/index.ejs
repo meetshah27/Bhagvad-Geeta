@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagvad Geeta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="shloka-container">
+            <p class="shloka-text"><%= ShlokText %></p>
+            <p class="shloka-number">Chapter No: <%= Chapter %></p>
+            <p class="shloka-number">Verse No: <%= Verse %></p>
+            <p class="shloka-text">Translation:</p>
+            <ul class="translation-list">
+                <% Translations.forEach(Translation => { %>
+                    <li><%= Translation.description %></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
